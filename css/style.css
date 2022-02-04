@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Rubik:wght@300;400;500&display=swap');
+/*font-family: 'Outfit', sans-serif;*/
+/*font-family: 'Rubik', sans-serif;*/
+
+/* Reset: Meyer Style */
+/* fjerner default browser styles */
+@import 'reset.css';
+
+@keyframes animation {
+    from {line-height: 0%;}
+    to {line-height: 400%;}
+  }
+  
+  @keyframes fade {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+
+
+
+/* Farve- og fontvariabler */
+:root {
+    /* farver */
+    --darkred: #0e0101;
+    --redbutton: #6e1313;
+    --hover: #855252;
+
+      /* fonte */
+  --navtekst: 'Outfit', sans-serif;
+  --overskrift: 'Rubik', sans-serif;
+  --broedtekst: 'Rubik', sans-serif;
+
+  /* whitespace */
+  --whitespace: .5rem;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(77,22,22);
+  background: linear-gradient(185deg, rgba(77,22,22,1) 0%, rgba(68,30,30,1) 35%, rgba(56,34,34,1) 100%);
+}
+
+/*scroll ned på forside funktion*/
+.arrowdown {
+  position: fixed;
+}
+
+.arrowdown svg {
+  margin-top: 60em;
+  margin-left: 9em;
+  fill: var(--darkred);
+  filter: drop-shadow(2px 9px 3px rgb(0 0 0 / 0.5));
+}
+
+.arrowdown svg:hover {
+  fill: var(--hover);
+}
+
+#wrap {
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: var(--darkred);
+  box-shadow: 2px 2px 30px 10px rgba(0, 0, 0, 0.6);
+  
+}
+
+/*main {
+
+}*/
+
+/* Mobil menuen */
+
+#showMenu {
+  padding-left: 25px;
+  float: left;
+}
+
+#submenu {
+  background: rgb(77,22,22);
+  background: linear-gradient(185deg, rgba(77,22,22,1) 0%, rgba(68,30,30,1) 35%, rgba(56,34,34,1) 100%);
+  background-repeat: repeat;
+
+}
+
+.mobmenu a {
+  line-height: 300%;
+  text-align: center;
+  cursor: pointer;
+  list-style: none;
+  animation-name: animation;
+  animation-duration: 1s;
+}
+
+.mobmenu ul {
+  display: block;
+}
+/* Mobil menu slut*/
+
+.navbar {
+  background-color: #0e0101;
+  padding: 1em;
+  
+}
+
+.navcontainer {
+ justify-content: center; 
+}
+
+.navcontainer a:hover {
+  cursor: pointer;
+  color: var(--hover);
+  
+}
+
+.navbar li {
+  display: inline;
+  padding: 1.2em;
+  font-size: 1.4rem;
+  font-variant: small-caps;
+}
+
+.navbar a {
+  color: white;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  animation-name: animation;
+  animation-duration: 1s;
+   
+}
+
+nav {
+  /*border: 1px solid red;
+  border-style: dotted;*/
+  display: grid;
+  grid-template-columns: 1fr 1em 1fr;
+  grid-template-areas: 
+    "ulleft logo ulright";
+  justify-items: center; 
+  min-height: 12em; 
+  }
+
+.ulleft {
+  /*border: 1px solid red;
+  border-style: dotted;*/
+  align-self: end;
+  grid-area: ulleft;
+
+}
+
+.logo {
+  /*border: 1px solid red;
+  border-style: dotted;*/
+  grid-area: logo;
+  align-self: end;
+  margin-left: -3em;
+  margin-right: -3em;
+   
+}
+
+.logo img {
+  width: 11em;
+   
+}
+
+.ulright {
+  align-self: end;
+  margin-right: 1.7em;
+  grid-area: ulright;
+  /*border: 1px solid red;
+  border-style: dotted;*/
+}
+  
+ /* hero image */
+.hero {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0e0101+0,000000+20,000000+50,000000+80,0e0101+100 */
+  background: rgb(14,1,1); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(14,1,1,1) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 80%, rgba(14,1,1,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(14,1,1,1) 0%,rgba(0,0,0,1) 20%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 80%,rgba(14,1,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(14,1,1,1) 0%,rgba(0,0,0,1) 20%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 80%,rgba(14,1,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0101', endColorstr='#0e0101',GradientType=0 ); /* IE6-9 */
+  max-height: 70em;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: var(--overskrift);
+  font-size: 1.1rem;
+ }
+
+.hero img {
+  width: 60%;
+}
+
+
+.kampagne {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0e0101+0,0e0101+100&1+0,0+40,0+60,1+100 */
+  background-image: -moz-linear-gradient(top,  rgba(14,1,1,1) 0%, rgba(14,1,1,0) 40%, rgba(14,1,1,0) 60%, rgba(14,1,1,1) 100%), url('../images/party.jpg'); /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(top,  rgba(14,1,1,1) 0%,rgba(14,1,1,0) 40%,rgba(14,1,1,0) 60%,rgba(14,1,1,1) 100%), url('../images/party.jpg');/* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(to bottom,  rgba(14,1,1,1) 0%,rgba(14,1,1,0) 40%,rgba(14,1,1,0) 60%,rgba(14,1,1,1) 100%), url('../images/party.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  min-height: 60em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+
+
+.kampagnetext {
+  display: inline-block;
+  position: relative;
+  background-color: rgba(248, 203, 203, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.6);
+  line-height: 1.5em;
+  padding: 1.3rem;
+  margin-top: 8%;
+  margin-right: 6%;
+  margin-left: 60%;
+}
+
+.kampagnetext h2 {
+  padding: var(--whitespace);
+  font-family: var(--overskrift);
+  text-shadow: 2px 1px 1px rgb(22, 1, 1, 0.8);
+  font-size: 1.3rem;
+  color: white;
+}
+
+.tilmeld-knap {
+  position: absolute;
+  margin: .5rem;
+  right: 1rem;
+  padding: 0.7rem 3.1rem;
+  background: rgb(110, 19, 19);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.6);
+  border: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  font-family: var(--overskrift);
+}
+
+.tilmeld-knap:hover {
+  background-color: var(--hover);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.produkt {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0e0101+0,0e0101+100&1+0,0+40,0+60,1+100 */
+  background-image: -moz-linear-gradient(top,  rgba(14,1,1,1) 0%, rgba(14,1,1,0) 40%, rgba(14,1,1,0) 60%, rgba(14,1,1,1) 100%), url('../images/hero.jpg'); /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(top,  rgba(14,1,1,1) 0%,rgba(14,1,1,0) 40%,rgba(14,1,1,0) 60%,rgba(14,1,1,1) 100%), url('../images/hero.jpg');/* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(to bottom,  rgba(14,1,1,1) 0%,rgba(14,1,1,0) 40%,rgba(14,1,1,0) 60%,rgba(14,1,1,1) 100%), url('../images/hero.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  min-height: 60em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.produkttext {
+  display: inline-block;
+  position: relative;
+  background-color: rgba(248, 203, 203, 0.4);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  line-height: 1.5em;
+  padding: 1.3rem;
+  margin-top: 8%;
+  margin-right: 60%;
+  margin-left: 6%;
+  /*border: 1px solid red;
+  border-style: dotted;*/
+  
+
+}
+
+.produkttext h2 {
+  padding: var(--whitespace);
+  font-family: var(--overskrift);
+  text-shadow: 2px 1.5px rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  color: white;
+
+}
+
+.produkttext p {
+  padding: var(--whitespace);
+  font-family: var(--broedtekst);
+  text-shadow: 2px 1.5px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  color: white;
+} 
+
+
+/* Køb knappen */
+
+.buyprodukt {
+  position: absolute;
+  margin: .5rem;
+  padding: 0.7rem 3.1rem;
+  background: #6e1313;
+  border: none;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  font-family: var(--overskrift);
+}
+  
+.buyprodukt:hover {
+  background-color: var(--hover);
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.kontaktinfo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  font-family: var(--broedtekst);
+  text-align: center;
+}
+
+.kontaktinfo a:hover {
+  color: var(--hover);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footertext {
+  line-height: 1.3rem;
+  flex-basis: 300px;
+    
+}
+
+.footertext img {
+  max-width: 20%;
+  padding: var(--whitespace);
+}
+
+
+/* Butik siden starter her*/
+.butiktext {
+  padding: var(--whitespace);
+  text-align: center;
+  color: white;
+  min-height: 15vh;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.9);
+  font-size: 2.2rem;
+  font-family: var(--overskrift);
+}
+
+.flex-container {
+  background-image: -moz-linear-gradient(top,  rgba(14,1,1,1) 0%, rgba(14,1,1,0) 40%, rgba(14,1,1,0) 60%, rgba(14,1,1,1) 100%), url('../images/hero.jpg'); /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(top,  rgba(14,1,1,1) 0%,rgba(14,1,1,0) 40%,rgba(14,1,1,0) 60%,rgba(14,1,1,1) 100%), url('../images/hero.jpg');/* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(to bottom,  rgba(14,1,1,1) 0%,rgba(14,1,1,0) 40%,rgba(14,1,1,0) 60%,rgba(14,1,1,1) 100%), url('../images/hero.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  min-height: 65vh;
+  padding: var(--whitespace);
+  
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.item {
+  flex-basis: 300px;
+  margin: 10px;
+  background-color: rgba(248, 203, 203, 0.5);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  line-height: 1.5em;
+  padding: 1.3rem;
+  
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  padding: var(--whitespace);
+  color: white;
+  text-shadow: 2px 2px 2px rgb(22, 1, 1, 0.9);
+  font-family: var(--broedtekst);
+  line-height: 1.6rem;
+}
+
+.item p {
+  padding: var(--whitespace);
+  color: white;
+  text-shadow: 2px 2px 2px rgb(22, 1, 1, 0.9);
+  font-family: var(--broedtekst);
+  line-height: 1.6rem;
+}
+
+.container button {
+  position: relative;
+  margin-left: 2rem;
+  padding: 0.7rem 3.1rem;
+  background: #6e1313;
+  border: none;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  font-family: var(--overskrift);
+}
+
+.container button:hover {
+  background-color: var(--hover);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/*Butik slutter her*/
+
+/*Historien*/
+
+#historie {
+  padding-top: 10vh;
+  background: rgb(14,1,1); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(14,1,1,1) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 80%, rgba(14,1,1,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(14,1,1,1) 0%,rgba(0,0,0,1) 20%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 80%,rgba(14,1,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(14,1,1,1) 0%,rgba(0,0,0,1) 20%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 80%,rgba(14,1,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  min-height: 90vh;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  filter: brightness(90%);
+  margin: auto;
+}
+
+#historie .contenttext {
+  margin: 1rem;
+  background-color: rgba(248, 203, 203, 0.4);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  line-height: 1.5em;
+  padding: 1.3rem;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.contenttext h1 {
+  font-size: 1.3rem;
+  font-family: var(--overskrift);
+  padding: var(--whitespace);
+  
+ 
+}
+
+.contenttext p {
+  font-family: var(--broedtekst);
+}
+/*Historien slut */
+
+
+@media only screen and (max-width: 768px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+ 
+  #wrap {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }  
+
+  .arrowdown {
+    display: none;
+  }
+
+  #showMenu {
+    font-size: 30px;
+    position: absolute;
+    float: left;
+    padding: 1rem;
+  }
+
+
+  .mobmenu a {
+    font-size: 3rem;
+    min-height: 10rem;
+    padding: 3rem;
+  }
+
+  .hjem {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .ulleft {
+      display: none;
+    }
+    
+    .ulright {
+      display: none;
+    }
+
+    nav {
+      min-height: 3em;
+    }
+
+    .hero {
+      height: 400px;
+    }
+    .hero-text {
+      font-size: 0.9rem;
+    }
+
+
+    .kampagnetext {
+      margin-top: 8rem;
+      margin-left: 3rem;
+      font-size: 1rem;
+      position: relative; 
+      justify-content: center;
+    }
+
+    .produkttext {
+      padding: 3rem;
+      font-size: 0.9rem;
+      margin: 1rem;
+      position: relative; 
+      justify-content: center;
+    }
+  
+}
+
+@media only screen and (min-width: 769px) {
+
+  #showMenu {
+    display: none;
+  }
+
+    
+}
